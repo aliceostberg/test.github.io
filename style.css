@@ -143,10 +143,10 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -5vh;
+  margin-top: -30vh;
   margin-left: -25vh;
   background: #72a6b5;
-  border: 2vh solid #417599;
+  border: 1vh solid #417599;
   border-radius: 50vh;
   font-family: "Helvetica", "Verdana", "Arial", sans;
   letter-spacing: 2vh;
@@ -164,12 +164,12 @@ html {
   text-align: center;
 }
 .breathe:before {
-  content: "Inhale";
+  content: "";
   opacity: 0;
   animation-delay: 6s;
 }
 .breathe:after {
-  content: "Exhale";
+  content: "";
 }
 
 @keyframes throb {
