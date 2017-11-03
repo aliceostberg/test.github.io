@@ -6,6 +6,7 @@ body {
   background-size: cover;
 }
 
+
   .wrap {
       height: 100%;  
       position: relative;
@@ -45,7 +46,7 @@ body {
   z-index: -100; 
 }*/
 
-.title{
+/*.title{
   text-align: center;
   color: #72a6b5;
   font-size: 70px;
@@ -55,10 +56,10 @@ body {
   right: 0;
 
 
-}
+}*/
 
 /* Dropdown Button*/
-.dropbtn {
+/*.dropbtn {
     background-color:#72a6b5;
     color: #fff;
     padding: 16px;
@@ -69,31 +70,17 @@ body {
     top: 8px;
     left: 16px;
     font-family: 'Source Sans Pro';
-}
+}*/
     
-html { 
-        height: 100%;
-    }
-      
-  body {
-      height: 100%; 
-      margin: 8px; 
-      padding: 0;
-      font-family: 'Source Sans Pro',Helvetica Neue,sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-}
 
 /* The container <div> - needed to position the dropdown content */
-.dropdown {
+/*.dropdown {
     position: relative;
     display: inline-block;
-}
+}*/
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+/*.dropdown-content {
     display: none;
     position: absolute;
     top: 30px;
@@ -103,10 +90,10 @@ html {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 
-}
+}*/
 
 /* Links inside the dropdown */
-.dropdown-content a {
+/*.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -115,44 +102,256 @@ html {
     text-align: left;
     font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
     
-}
+}*/
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+/*.dropdown-content a:hover {
   background-color: #4b9aab;
   color: #fff;
-}
+}*/
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+/*.dropdown:hover .dropdown-content {
     display: block;
-}
+}*/
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+/*.dropdown:hover .dropbtn {
     background-color: #0a3542;
     color: white;
+}*/
+
+
+
+/*-----------------------------------------------------------*/
+ .menu:before, .menu:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
-.breathe {
-  z-index: 2;
-  width: 46vh;
-  height: 46vh;
-  text-align: center;
-  line-height: 46vh;
+
+.absolute-center, .menu, .menu .btn .fa, .menu .btn.trigger .line {
   position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.menu {
+  width: 5em;
+  height: 5em;
+}
+.menu .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+  transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+  transition: opacity 1s, z-index 0.3s, transform 1s;
+  transition: opacity 1s, z-index 0.3s, transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.menu .btn .fa {
+  font-size: 3em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: gold;
+  top: 60%;
+}
+.menu .btn:hover .fa {
+  color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger {
+  opacity: 1;
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.menu .btn.trigger:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.menu .btn.trigger:hover .line {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger:hover .line:before, .menu .btn.trigger:hover .line:after {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.menu .btn.trigger .line {
+  width: 60%;
+  height: 6px;
+  background: #000;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.3s, height 0.3s, top 0.3s;
+  transition: background-color 0.3s, height 0.3s, top 0.3s;
+}
+.menu .btn.trigger .line:before, .menu .btn.trigger .line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #000;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+.menu .btn.trigger .line:before {
+  top: -12px;
+  -webkit-transform-origin: 15% 100%;
+          transform-origin: 15% 100%;
+}
+.menu .btn.trigger .line:after {
+  top: 12px;
+  -webkit-transform-origin: 25% 30%;
+          transform-origin: 25% 30%;
+}
+.menu .rotater {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.menu.active .btn-icon {
+  opacity: 1;
+  z-index: 50;
+}
+.menu.active .trigger .line {
+  height: 0px;
+  top: 0%;
+}
+.menu.active .trigger .line:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 110%;
+}
+.menu.active .trigger .line:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 110%;
+}
+
+.rotater:nth-child(1) {
+  -webkit-transform: rotate(-22.5deg);
+          transform: rotate(-22.5deg);
+}
+
+.menu.active .rotater:nth-child(1) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(22.5deg);
+          transform: translateY(-10em) rotate(22.5deg);
+}
+
+.rotater:nth-child(2) {
+  -webkit-transform: rotate(22.5deg);
+          transform: rotate(22.5deg);
+}
+
+.menu.active .rotater:nth-child(2) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-22.5deg);
+          transform: translateY(-10em) rotate(-22.5deg);
+}
+
+.rotater:nth-child(3) {
+  -webkit-transform: rotate(67.5deg);
+          transform: rotate(67.5deg);
+}
+
+.menu.active .rotater:nth-child(3) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-67.5deg);
+          transform: translateY(-10em) rotate(-67.5deg);
+}
+
+.rotater:nth-child(4) {
+  -webkit-transform: rotate(112.5deg);
+          transform: rotate(112.5deg);
+}
+
+.menu.active .rotater:nth-child(4) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-112.5deg);
+          transform: translateY(-10em) rotate(-112.5deg);
+}
+
+.rotater:nth-child(5) {
+  -webkit-transform: rotate(157.5deg);
+          transform: rotate(157.5deg);
+}
+
+.menu.active .rotater:nth-child(5) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-157.5deg);
+          transform: translateY(-10em) rotate(-157.5deg);
+}
+
+.rotater:nth-child(6) {
+  -webkit-transform: rotate(202.5deg);
+          transform: rotate(202.5deg);
+}
+
+.menu.active .rotater:nth-child(6) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-202.5deg);
+          transform: translateY(-10em) rotate(-202.5deg);
+}
+
+.rotater:nth-child(7) {
+  -webkit-transform: rotate(247.5deg);
+          transform: rotate(247.5deg);
+}
+
+.menu.active .rotater:nth-child(7) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-247.5deg);
+          transform: translateY(-10em) rotate(-247.5deg);
+}
+
+.rotater:nth-child(8) {
+  -webkit-transform: rotate(292.5deg);
+          transform: rotate(292.5deg);
+}
+
+.menu.active .rotater:nth-child(8) .btn-icon {
+  -webkit-transform: translateY(-10em) rotate(-292.5deg);
+          transform: translateY(-10em) rotate(-292.5deg);
+}
+
+/*-----------------------------------------------------------*/
+.breathe{
+  position: absolute;
+  z-index: -1;
+  width: 48vh;
+  height: 48vh;
+  text-align: center;
+  line-height: 48vh;
+  position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -30vh;
+  margin-top: -5vh;
   margin-left: -25vh;
-  background: #72a6b5;
-  border: 1vh solid #417599;
-  border-radius: 50vh;
+  background: white, 80%;
+  border: 2vh solid rgba(255, 255, 255, 0.1);
+  border-radius: 52vh;
   font-family: "Helvetica", "Verdana", "Arial", sans;
-  letter-spacing: 2vh;
-  font-size: 5vh;
+  letter-spacing: 4vh;
+  font-size: 7vh;
   font-weight: light;
-  color: #14537E;
+  color: #14537E, 80%;
   text-transform: uppercase;
   animation: 12s throb infinite ease-in-out;
 }
@@ -164,12 +363,12 @@ html {
   text-align: center;
 }
 .breathe:before {
-  content: "";
+  content:"";
   opacity: 0;
   animation-delay: 6s;
 }
 .breathe:after {
-  content: "";
+  content:"";
 }
 
 @keyframes throb {
@@ -191,7 +390,7 @@ html {
     width: 20vh;
     height: 20vh;
     line-height: 20vh;
-    background-color: #dcefff;
+    background-color: aliceblue, 80%;
   }
   85% {
     font-size: 5vh;
@@ -217,12 +416,8 @@ html {
     opacity: 1;
   }
 }
-.breathe + .breathe {
+/*.breathe + .breathe {
   animation: none;
   zoom: 1.01;
-  z-index: 0;
-}
-
-
-
-
+  z-index: -2;
+}*/
