@@ -1,4 +1,4 @@
-		var lFollowX = 0,
+  	var lFollowX = 0,
     		lFollowY = 0,
     		x = 0,
     		y = 0,
@@ -30,6 +30,7 @@
 
 			moveBackground();
 
+
 $('.breathe').after($('.breathe').clone());
 
 
@@ -37,3 +38,4 @@ $(body).click(function() {
   $(this)[0].msRequestFullscreen();
   $(this)[0].webkitRequestFullscreen();
 });
+
